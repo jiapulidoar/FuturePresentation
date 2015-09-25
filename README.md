@@ -11,9 +11,8 @@ Made possible thanks to...
 ## Installation
 
  ```sh
- $ git clone https://github.com/VisualComputing/structured_programming.git
- $ cd structured_programming
- $ git checkout gh-pages
+ $ git clone https://github.com/jiapulidoar/FuturePresentation.git 
+ $ cd FuturePresentation
  ```
 
 ## Folder Structure
