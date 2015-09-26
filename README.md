@@ -36,7 +36,7 @@ External markdown and speaker notes, require that presentations run from a local
 
 2. Install [Grunt](http://gruntjs.com/getting-started#installing-the-cli)
 
-3. Install dependencies (you must be already on the presentation folder, otherwise ```$ cd st FuturePresentation```)
+3. Install dependencies (you must be already on the presentation folder, otherwise ```$ cd FuturePresentation```)
 
  ```sh
  $ npm install
