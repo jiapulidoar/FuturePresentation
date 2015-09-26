@@ -1,4 +1,4 @@
-## Object Oriented Programming Slides -- Structured Programming Overview
+## Object Oriented Programming Slides --  FuturePresentation
 
 Part of the *Object Oriented Programming* course given at [National University of Colombia](http://www.disi.unal.edu.co/).
 
@@ -36,7 +36,7 @@ External markdown and speaker notes, require that presentations run from a local
 
 2. Install [Grunt](http://gruntjs.com/getting-started#installing-the-cli)
 
-3. Install dependencies (you must be already on the presentation folder, otherwise ```$ cd structured_programming```)
+3. Install dependencies (you must be already on the presentation folder, otherwise ```$ cd st FuturePresentation```)
 
  ```sh
  $ npm install
