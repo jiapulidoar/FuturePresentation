@@ -64,23 +64,21 @@ V:
 ## Important functions used in the code (explanation)
 ### Sum_of_div
 ```java
- <!--
+
 int sum_of_div ( int n )
 {
-	  tmp.append(n);
-	    int sum = 0;
-		  for ( int i = 1; i < n ; i ++)
-			      if ( n % i == 0 )
-					      {
-							        sum = sum + i;
-									      tmp.append(i);
-										      }
-		    return sum;    
+  tmp.append(n);
+  int sum = 0;
+  for ( int i = 1; i < n ; i ++)
+     if ( n % i == 0 )
+	 {
+        sum = sum + i;
+        tmp.append(i);
+	  }
+	    return sum;    
 }
- -->
+
  ```
-
-
 V:
 ## Code Processing: 
 ```java
@@ -164,7 +162,7 @@ V:
 
 H:
 # Leyland Numbers
-<!-- .slide: data-background="#005050" -->
+<!-- .slide: data-background="#7E2121"  -->
 V:
 
 ## What is it about?
@@ -180,7 +178,8 @@ V:
 What is?
 >In number theory, a Leyland number is a number of the form **x^y + y^x** where x and y are integers greater than 1.
 
-This requirement is important, since without it every positive integer would be a Leyland number of the form x1 + 1x. Also, because of the commutative property of addition, the condition x ≥ y is usually added to avoid double-covering the set of Leyland numbers (so we have 1 < y ≤ x).
+This requirement is important, since without it every positive integer would be a Leyland number of the form x1 + 1x.
+Also, because of the commutative property of addition, the condition x ≥ y is usually added to avoid double-covering the set of Leyland numbers (so we have 1 < y ≤ x).<!-- .element: class="fragment" data-fragment-index="1"-->
    
 
 Take from [Wikipedia](https://en.wikipedia.org/wiki/Leyland_number) 
@@ -188,3 +187,13 @@ Take from [Wikipedia](https://en.wikipedia.org/wiki/Leyland_number)
 V:
 
 ## Example:
+
+**X=2    and     Y=2**      (x,y > 1)
+> X^Y + Y^X = 2^2 + 2^2 =  <!-- .element: class="fragment" data-fragment-index="1"-->
+8
+
+8 is the first leyland number  <!-- .element: class="fragment" data-fragment-index="2"-->
+
+V:
+
+##Functions in the code
