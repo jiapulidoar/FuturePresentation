@@ -44,21 +44,48 @@ V:
  The final code <!-- .element: class="fragment" data-fragment-index="3"--> 
 V:
 ## Abundant Number
- 
+
  What is?
   
    >In number theory, an abundant number is a number for which the sum of its proper divisors is greater than the number itself. The amount by which the sum exceeds the number is the abundance. 
 
    Take from [Wikipedia](https://en.wikipedia.org/wiki/Abundant_number)
+V:
+## Example:
+12 is an abundant number. 
+Divisors: 1, 2, 3, 4, 6 <!-- .element: class="fragment" data-fragment-index="1"-->
 
+Sum: 16  <!-- .element: class="fragment" data-fragment-index="2"-->
+
+Abundance:4  <!-- .element: class="fragment" data-fragment-index="3"-->
+
+> 16 Is grater than 12 <!-- .element: class="fragment" data-fragment-index="4"-->
 V:
 ## Important functions used in the code (explanation)
+### Sum_of_div
+```java
+ <!--
+int sum_of_div ( int n )
+{
+	  tmp.append(n);
+	    int sum = 0;
+		  for ( int i = 1; i < n ; i ++)
+			      if ( n % i == 0 )
+					      {
+							        sum = sum + i;
+									      tmp.append(i);
+										      }
+		    return sum;    
+}
+ -->
+ ```
+
 
 V:
 ## Code Processing: 
 ```java
 <!--
-//Better testing 
+int sum_of_div ( int n ) 
 ArrayList<IntList>  abundants = new ArrayList <IntList>();
 IntList tmp = new IntList();
 int sum_of_div ( int n )
@@ -132,7 +159,32 @@ void setup ()
 }
 -->
 ```
+V:
+##The result 
 
 H:
 # Leyland Numbers
 <!-- .slide: data-background="#005050" -->
+V:
+
+## What is it about?
+
+Explanation of suseccion <!-- .element: class="fragment" data-fragment-index="1"-->
+ 
+Important functions used in the code<!-- .element: class="fragment" data-fragment-index="2"-->
+
+The final code <!-- .element: class="fragment" data-fragment-index="3"-->
+V:
+## Leyland numbers
+
+What is?
+>In number theory, a Leyland number is a number of the form **x^y + y^x** where x and y are integers greater than 1.
+
+This requirement is important, since without it every positive integer would be a Leyland number of the form x1 + 1x. Also, because of the commutative property of addition, the condition x ≥ y is usually added to avoid double-covering the set of Leyland numbers (so we have 1 < y ≤ x).
+   
+
+Take from [Wikipedia](https://en.wikipedia.org/wiki/Leyland_number) 
+
+V:
+
+## Example:
