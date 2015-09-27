@@ -188,9 +188,14 @@ V:
 
 ## Example:
 
-<<<<<<< HEAD
-V:
 
+**X=2    and     Y=2**      (x,y > 1)
+> X^Y + Y^X = 2^2 + 2^2 =  <!-- .element: class="fragment" data-fragment-index="1"-->
+8
+
+8 is the first leyland number  <!-- .element: class="fragment" data-fragment-index="2"-->
+
+V:
 ## Code JavaScript:
 
 ```java
@@ -268,15 +273,3 @@ Code JavaScript produces:
 
 
 
-
-=======
-**X=2    and     Y=2**      (x,y > 1)
-> X^Y + Y^X = 2^2 + 2^2 =  <!-- .element: class="fragment" data-fragment-index="1"-->
-8
-
-8 is the first leyland number  <!-- .element: class="fragment" data-fragment-index="2"-->
-
-V:
-
-##Functions in the code
->>>>>>> 92eb51f7e00a8224d528160ba77765ff7c1dd639
