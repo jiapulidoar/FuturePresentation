@@ -1,33 +1,31 @@
-
-var sketch = function( p ) {
-    var circles= 10; 
+var circles= 10; 
     
-    p.setup = function() {
+    function setup() {
         
-        p.createCanvas(400, 400);
-        p.noLoop();       
-    };
+        createCanvas(400, 400);
+        noLoop();       
+    }
     
     
     
-    p.draw = function() {
-        p.background(0);
+    function draw() {
+        background(0);
         
         var lay = leyland();
         var layr = leyland();
         layr.reverse();
         for(var i=0;i<circles;i++)
         {
-            var a = p.map(layr[i],lay[0],layr[0],lay[0],p.width+p.width/4);
-            var b = p.map(lay[i],lay[0],layr[0],0,255);
+            var a = map(layr[i],lay[0],layr[0],lay[0],width+width/4);
+            var b = map(lay[i],lay[0],layr[0],0,255);
             //console.log(lay);
-            p.noStroke();
-            p.fill(b,0,0);
-            p.ellipse(p.width/2,p.height/2,a,a);
+            noStroke();
+            fill(b,0,0);
+            ellipse(width/2,height/2,a,a);
             
         }
 
-        }; 
+        }
         
 
         
@@ -58,7 +56,3 @@ var sketch = function( p ) {
         function CompareNumbers(a, b){
             return a-b; 
         }
-
-};
-
-var myp5 = new p5(sketch, 'leyland_id');
