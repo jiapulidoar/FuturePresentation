@@ -20,7 +20,7 @@ H:
 
 # Successions 
 
-by some [Sebastian Chaves](https://github.com/adamantwharf) - [Laura Santos](https://github.com/lsfinite) - [Jimmy Pulido](https://github.com/jiapulidoar)
+by  [Sebastian Chaves](https://github.com/adamantwharf) - [Laura Santos](https://github.com/lsfinite) - [Jimmy Pulido](https://github.com/jiapulidoar)
 
 H:
 
@@ -47,7 +47,7 @@ V:
 
  What is?
   
-   >In number theory, an abundant number is a number for which the sum of its proper divisors is greater than the number itself. The amount by which the sum exceeds the number is the abundance. 
+  >In number theory, an abundant number is a number for which the sum of its proper divisors is greater than the number itself. The amount by which the sum exceeds the number is the abundance. 
 
    Take from [Wikipedia](https://en.wikipedia.org/wiki/Abundant_number)
 V:
