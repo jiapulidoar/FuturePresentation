@@ -30,11 +30,29 @@ H:
  1. Abundant Numbers <!-- .element: class="fragment" data-fragment-index="1"-->
  1. Leyland Numbers <!-- .element: class="fragment" data-fragment-index="2"-->
 
-
 H:
 
 # Abundant Numbers 
 <!-- .slide: data-background="#005050" -->
+V:
+ 
+ ## What is it about?
+ Explanation of suseccion <!-- .element: class="fragment" data-fragment-index="1"-->
+
+ Important functions used in the code<!-- .element: class="fragment" data-fragment-index="2"-->
+
+ The final code <!-- .element: class="fragment" data-fragment-index="3"--> 
+V:
+## Abundant Number
+ 
+ What is?
+  
+   >In number theory, an abundant number is a number for which the sum of its proper divisors is greater than the number itself. The amount by which the sum exceeds the number is the abundance. 
+
+   Take from [Wikipedia](https://en.wikipedia.org/wiki/Abundant_number)
+
+V:
+## Important functions used in the code (explanation)
 
 V:
 ## Code Processing: 
