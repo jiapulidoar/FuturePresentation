@@ -290,10 +290,44 @@ V:
 8
 
 8 is the first leyland number  <!-- .element: class="fragment" data-fragment-index="2"-->
+<<<<<<< HEAD
 
 
 V:
 ## Important functions used in the code (explanation)
+=======
+V:
+ ##Important function used in the code (explanation)
+####Code in Processing 
+### Leyland Number
+```java
+	 IntList leyland (int n)
+{
+	  if (n>13)
+		      n=13;
+	    v=new IntList();
+		  enesimo= new IntList();
+		    for(int i=0;i<n;i++)
+				    for(int j=0;j<=n-i;j++)
+						      {
+								            int m = ( pow(i+2,j+2) + pow(j+2,i+2) ); 
+											          if(! v.hasValue(m) )
+														              v.append(m);
+													        }
+			   v.sort();
+			      for(int i=0;i<n;i++)
+					        enesimo.append(v.get(i));
+				     return enesimo;
+} 
+
+<<<<<<< HEAD
+```
+=======
+
+V:
+## Important functions used in the code (explanation)
+####Code in Processing
+>>>>>>> 6b30e671a78011916cb2573d1aae709f882f58a9
 ### Pow
 The best way to calculate the power of a number.
 ```java
@@ -310,6 +344,7 @@ int pow(int n, int p)
 }
 -->
  ```
+<<<<<<< HEAD
  V:
 ## Important functions used in the code (explanation)
 ### leyland
@@ -338,6 +373,9 @@ IntList leyland (int n)
 }
 -->
  ```
+=======
+
+>>>>>>> 6b30e671a78011916cb2573d1aae709f882f58a9
 V: 
 ## Code Processing: 
 ```java
