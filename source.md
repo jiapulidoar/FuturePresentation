@@ -401,7 +401,6 @@ void setup()
 -->
 ```
 
->>>>>>> 77474892b580e88d8aaf25a9cce997ac4f59b3d6
 V:
 ## Code JavaScript:
 
