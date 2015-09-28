@@ -64,26 +64,26 @@ V:
 ## Important functions used in the code (explanation)
 ### Sum_of_div
 ```java
-
+<!--
 int sum_of_div ( int n )
 {
-  tmp.append(n);
-  int sum = 0;
-  for ( int i = 1; i < n ; i ++)
-     if ( n % i == 0 )
-	 {
-        sum = sum + i;
-        tmp.append(i);
-	  }
-	    return sum;    
+    tmp.append(n);
+    int sum = 0;
+    for ( int i = 1; i < n ; i ++)
+        if ( n % i == 0 )
+        {
+            sum = sum + i;
+            tmp.append(i);
+        }
+    return sum;    
 }
-
+-->
  ```
 V:
 ## Code Processing: 
 ```java
-<!--
-int sum_of_div ( int n ) 
+<!-- 
+//Better testing 
 ArrayList<IntList>  abundants = new ArrayList <IntList>();
 IntList tmp = new IntList();
 int sum_of_div ( int n )
@@ -101,9 +101,8 @@ int sum_of_div ( int n )
 // a comment to test git
 void setup ()
 {
-   PImage image = loadImage("stallman.jpg"); 
-   size( 610,400);
-     background(0,50,50);
+   size(576,442);
+   background(0,50,50);
    int n = 10;
 
    int cont = 0;
@@ -132,33 +131,130 @@ void setup ()
    float x = 0;
    for ( int xi = 0 ; xi < 6 ; xi ++ )
    {
-     
-     x += abundants.get(xi).get(abundants.get(xi).size() - 1 )/2.0 * scale;
-     float y = abundants.get(xi).get(0)/2.0 * scale;
+     float radOfSum = abundants.get(xi).get(abundants.get(xi).size() - 1 )/2.0;
+     x += radOfSum  * scale;
+     float radOfNumber = abundants.get(xi).get(0)/2.0;
+     float y =  radOfNumber * scale;
      fill(255,255,200);
      noStroke();
-     ellipse(x,y, abundants.get(xi).get(0) * scale ,abundants.get(xi).get(0) * scale);
-     y += abundants.get(xi).get(0)/2.0* scale;
+     ellipse(x,y, radOfNumber * 2 * scale ,radOfNumber * 2 * scale);
+     y += radOfNumber* scale;
      
      for ( int i = 1 ; i < abundants.get(xi).size(); i ++ )
      {
        int size = abundants.get(xi).size();
-       float a = map(abundants.get(xi).get(i),abundants.get(xi).get(1) 
-                 ,abundants.get(xi).get(size-2)*1.1,0,255);
+       float diamOfActual =abundants.get(xi).get(i);
+       float diamOfFirst = abundants.get(xi).get(1);
+       float diamOfLast = abundants.get(xi).get(size - 2 ) * 1.1;
+       float a = map(diamOfActual,diamOfFirst 
+                 ,diamOfLast,0,255);
        fill(255,255-a,255-a); 
        noStroke();
-       y += abundants.get(xi).get(i)/2.0 * scale;
-       println(y);
-       ellipse(x, y , abundants.get(xi).get(i)* scale,abundants.get(xi).get(i)* scale);
-       y += abundants.get(xi).get(i)/2.0 * scale;  
+       y += diamOfActual/2.0 * scale;
+       //println(y);
+       ellipse(x, y , diamOfActual* scale,diamOfActual* scale);
+       y += diamOfActual/2.0 * scale;  
      }
-     x += abundants.get(xi).get(abundants.get(xi).size() - 1 )/2.0 * scale;
+     x += radOfSum * scale;
    }
 }
 -->
 ```
+
+V:
+## Code JavaScript: 
+```java
+<!-- 
+var sketch = function ( p ) {
+
+    var n = 10; 
+    var abundants =  [];
+    var tmp = new Array();
+    function sum_of_div ( n )
+    {
+    tmp.push(n);
+    var sum = 0;
+    for ( var i = 1; i < n ; i ++)
+        if ( n % i == 0 )
+        {
+        sum = sum + i;
+        tmp.push(i);
+        }
+    return sum;    
+    }
+      p.setup =   function() {
+            
+            p.createCanvas(576, 438);
+            p.noLoop();       
+        }
+        
+        
+        
+        p.draw = function () {
+            p.background(0,50,50);
+        //   console.log("algo");
+            var cont = 0;
+            var number = 1;
+            //ellipse(30,30,30,30);
+            while ( true )
+            {
+                if ( cont == n )
+                    break;
+                tmp = new Array();
+                var sumDiv = sum_of_div(number);
+        //      console.log(sumDiv);
+                
+                if ( number < sumDiv)
+                {
+                    tmp.push(sumDiv);
+                    //console.log(tmp);
+                    abundants.push(tmp);
+                   // console.log(abundants);
+                    cont ++ ;
+                }
+                number ++ ;
+            
+            }
+
+            var scale = 3;
+            var x = 0;
+            for ( var xi = 0 ; xi < 6 ; xi ++ )
+            {
+                var radOfSum = abundants[xi][abundants[xi].length - 1]/2.0;
+                x += radOfSum * scale;
+                var radOfNumber = abundants[xi][0]/2.0;
+                var y =  radOfNumber * scale;
+                p.fill(255,255,200);
+                p.noStroke();
+                p.ellipse(x,y, radOfNumber * 2 *  scale ,radOfNumber * 2 *  scale);
+                y += radOfNumber* scale;
+                
+                for ( var i = 1 ; i < abundants[xi].length; i ++ )
+                {
+                    var length = abundants[xi].length;
+                    var diamOfActual = abundants[xi][i];
+                    var diamOfFirst = abundants[xi][1];
+                    var diamOfLast = abundants[xi][length-2]*1.1;
+                    var a = p.map(diamOfActual,diamOfFirst,diamOfLast,0,255);
+                    p.fill(255,255-a,255-a); 
+                    p.noStroke();
+                    y += diamOfActual/2.0 * scale;
+                    p.ellipse(x, y , diamOfActual* scale,diamOfActual* scale);
+                    y += diamOfActual/2.0 * scale;  
+                }
+                x += radOfSum * scale;
+            }
+            
+    }
+};
+var myp5 = new p5 (sketch, 'abundant_id');
+-->
+```
 V:
 ##The result 
+
+<div id='abundant_id'> </div>
+
 
 H:
 # Leyland Numbers
@@ -194,6 +290,113 @@ V:
 8
 
 8 is the first leyland number  <!-- .element: class="fragment" data-fragment-index="2"-->
+
+
+V:
+## Important functions used in the code (explanation)
+### Pow
+The best way to calculate the power of a number.
+```java
+<!--
+int pow(int n, int p)
+{
+  if(p==0) return 1;
+    
+  else if ( p % 2 == 1 )
+    return n * pow(n,p-1);
+  
+  int a = pow ( n , p%2);
+  return a * a;
+}
+-->
+ ```
+ V:
+## Important functions used in the code (explanation)
+### leyland
+```java
+<!--
+IntList v;
+IntList leyland (int n)
+{
+  if (n>13)
+    n=13;
+  v=new IntList();
+  enesimo= new IntList();
+  for(int i=0;i<n;i++)
+    for(int j=0;j<=n-i;j++)
+      {
+          int m = ( pow(i+2,j+2) + pow(j+2,i+2) ); 
+          if(! v.hasValue(m) )
+            v.append(m);
+      }
+   //println(v);
+   v.sort();
+   //println(v);
+   for(int i=0;i<n;i++)
+      enesimo.append(v.get(i));
+   return enesimo;
+}
+-->
+ ```
+V: 
+## Code Processing: 
+```java
+<!-- 
+IntList v;
+IntList enesimo;
+int pow(int n, int p)
+{
+  if(p==0) return 1;
+    
+  else if ( p % 2 == 1 )
+    return n * pow(n,p-1);
+  
+  int a = pow ( n , p%2);
+  return a * a;
+}
+
+IntList layland (int n)
+{
+  if (n>13)
+    n=13;
+  v=new IntList();
+  enesimo= new IntList();
+  for(int i=0;i<n;i++)
+    for(int j=0;j<=n-i;j++)
+      {
+          int m = ( pow(i+2,j+2) + pow(j+2,i+2) ); 
+          if(! v.hasValue(m) )
+            v.append(m);
+      }
+   //println(v);
+   v.sort();
+   //println(v);
+   for(int i=0;i<n;i++)
+      enesimo.append(v.get(i));
+   return enesimo;
+}
+
+void setup()
+{
+  background(0);
+  //ellipse(200,200,55,55);
+  size(400,400);
+  int n = 12;
+  IntList lay =layland(n);
+  IntList layr = layland(n);
+  layr.sortReverse();
+  
+  for(int i=0;i<lay.size();i++)
+  {
+    float a = map (layr.get(i),lay.get(0),layr.get(0),lay.get(0),width+width/4);
+    float b = map (lay.get(i),lay.get(0),layr.get(0),0,255);
+    fill(b,0,0);
+    noStroke();
+    ellipse(width/2,height/2,a,a);
+  }
+}
+-->
+```
 
 V:
 ## Code JavaScript:
@@ -258,15 +461,11 @@ var circles= 10;
         function CompareNumbers(a, b){
             return a-b; 
         }
-
-
-
 -->
 ```
 V: 
 
-##Leyland
-Code JavaScript produces: 
+##The result 
 
 <div id='leyland_id'> </div>
 

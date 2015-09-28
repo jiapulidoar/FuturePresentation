@@ -4,6 +4,8 @@ Part of the *Object Oriented Programming* course given at [National University o
 
 Powered by [reveal](https://github.com/hakimel/reveal.js).
 
+Using the adaptation of [nakednous](https://github.com/objetos/structured_programming/tree/gh-pages).
+
 Made possible thanks to... 
 
 <!--- a long list of community members and links to their pages. To come ;) -->
