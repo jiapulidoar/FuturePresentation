@@ -323,6 +323,7 @@ V:
 
 V:
 ## Important functions used in the code (explanation)
+####Code in Processing
 ### Pow
 The best way to calculate the power of a number.
 ```java
@@ -339,34 +340,7 @@ int pow(int n, int p)
 }
 -->
  ```
- V:
-## Important functions used in the code (explanation)
-### leyland
-```java
-<!--
-IntList v;
-IntList leyland (int n)
-{
-  if (n>13)
-    n=13;
-  v=new IntList();
-  enesimo= new IntList();
-  for(int i=0;i<n;i++)
-    for(int j=0;j<=n-i;j++)
-      {
-          int m = ( pow(i+2,j+2) + pow(j+2,i+2) ); 
-          if(! v.hasValue(m) )
-            v.append(m);
-      }
-   //println(v);
-   v.sort();
-   //println(v);
-   for(int i=0;i<n;i++)
-      enesimo.append(v.get(i));
-   return enesimo;
-}
--->
- ```
+
 V: 
 ## Code Processing: 
 ```java
