@@ -60,6 +60,7 @@ Sum: 16  <!-- .element: class="fragment" data-fragment-index="2"-->
 Abundance:4  <!-- .element: class="fragment" data-fragment-index="3"-->
 
 > 16 Is grater than 12 <!-- .element: class="fragment" data-fragment-index="4"-->
+
 V:
 ## Important functions used in the code (explanation)
 ### Sum_of_div
