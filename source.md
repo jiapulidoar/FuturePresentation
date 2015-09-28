@@ -101,9 +101,7 @@ int sum_of_div ( int n )
 // a comment to test git
 void setup ()
 {
-   PImage image = loadImage("stallman.jpg"); 
-   size( 610,400);
-     background(0,50,50);
+   background(0,50,50);
    int n = 10;
 
    int cont = 0;
@@ -194,7 +192,31 @@ V:
 8
 
 8 is the first leyland number  <!-- .element: class="fragment" data-fragment-index="2"-->
+V:
+ ##Important function used in the code (explanation)
+####Code in Processing 
+### Leyland Number
+```java
+	 IntList leyland (int n)
+{
+	  if (n>13)
+		      n=13;
+	    v=new IntList();
+		  enesimo= new IntList();
+		    for(int i=0;i<n;i++)
+				    for(int j=0;j<=n-i;j++)
+						      {
+								            int m = ( pow(i+2,j+2) + pow(j+2,i+2) ); 
+											          if(! v.hasValue(m) )
+														              v.append(m);
+													        }
+			   v.sort();
+			      for(int i=0;i<n;i++)
+					        enesimo.append(v.get(i));
+				     return enesimo;
+} 
 
+```
 V:
 ## Code JavaScript:
 
