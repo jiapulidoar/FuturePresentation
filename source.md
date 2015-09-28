@@ -101,10 +101,7 @@ int sum_of_div ( int n )
 // a comment to test git
 void setup ()
 {
-<<<<<<< HEAD
-=======
    size(576,442);
->>>>>>> 77474892b580e88d8aaf25a9cce997ac4f59b3d6
    background(0,50,50);
    int n = 10;
 
