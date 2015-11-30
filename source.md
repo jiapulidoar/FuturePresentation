@@ -18,241 +18,52 @@
 
 H:
 
-# Successions 
+# ** FUTURE GAMES ** 
 
 by  [Sebastian Chaves](https://github.com/adamantwharf) - [Laura Santos](https://github.com/lsfinite) - [Jimmy Pulido](https://github.com/jiapulidoar)
-
+I
 H:
 
 # Index
 
 <!-- .slide: data-background="#7E2121" --> 
- 1. Abundant Numbers <!-- .element: class="fragment" data-fragment-index="1"-->
- 1. Leyland Numbers <!-- .element: class="fragment" data-fragment-index="2"-->
-
+ 1. The main idea  <!-- .element: class="fragment" data-fragment-index="1"-->
+ 1. The Games <!-- .element: class="fragment" data-fragment-index="2"-->
+ 1. The way we did it <!-- .element: class="fragment" data-fragment-index="3"-->
 H:
 
-# Abundant Numbers 
+# *The main idea*
 <!-- .slide: data-background="#005050" -->
 V:
  
  ## What is it about?
- Explanation of suseccion <!-- .element: class="fragment" data-fragment-index="1"-->
-
- Important functions used in the code<!-- .element: class="fragment" data-fragment-index="2"-->
-
- The final code <!-- .element: class="fragment" data-fragment-index="3"--> 
-V:
-## Abundant Number
-
- What is?
   
-  >In number theory, an abundant number is a number for which the sum of its proper divisors is greater than the number itself. The amount by which the sum exceeds the number is the abundance. 
-
-   Take from [Wikipedia](https://en.wikipedia.org/wiki/Abundant_number)
+  >The idea of the game was creat a serie of mini games. Easy to play, easy to lose.This will become attractive to the player, so she/he will play it again and again.  
+  *Do you wanna play it?* <!-- .element: class="fragment" data-fragment-index="2"-->
 V:
-## Example:
-12 is an abundant number. 
-Divisors: 1, 2, 3, 4, 6 <!-- .element: class="fragment" data-fragment-index="1"-->
+## Mini Games?:
+Yeap, we have made five of them, so you can play the one you consider more interesting. 
+<!-- .element: class="fragment" data-fragment-index="1"-->
 
-Sum: 16  <!-- .element: class="fragment" data-fragment-index="2"-->
+Just see the squares...  <!-- .element: class="fragment" data-fragment-index="2"-->
 
-Abundance:4  <!-- .element: class="fragment" data-fragment-index="3"-->
+**And make your choice!!!** <!-- .element: class="fragment" data-fragment-index="3"-->
 
-> 16 Is grater than 12 <!-- .element: class="fragment" data-fragment-index="4"-->
-
+H:
+# *The Games*
 V:
-## Important functions used in the code (explanation)
-### Sum_of_div
-```java
-<!--
-int sum_of_div ( int n )
-{
-    tmp.append(n);
-    int sum = 0;
-    for ( int i = 1; i < n ; i ++)
-        if ( n % i == 0 )
-        {
-            sum = sum + i;
-            tmp.append(i);
-        }
-    return sum;    
-}
--->
- ```
+### Galaga 
+  >A version of the clasic game. Is an arcade video game developed by Tomohiro Nishikado and released in 1978 <!-- .element: class="fragment" data-fragment-index="1"-->
+##### More information on [Wikipedia](https://en.wikipedia.org/wiki/Space_Invaders)
+
+V: 
+### Clouds
+  > How far can you go?? The sky is the limit. With this game you will jump the higher you can. Just move te bus with the mouse to go up.
+  The inspiration for this game was the experience as a gamer. <!-- .element: class="fragment" data-fragment-index="1"-->
 V:
-## Code Processing: 
-```java
-<!-- 
-//Better testing 
-ArrayList<IntList>  abundants = new ArrayList <IntList>();
-IntList tmp = new IntList();
-int sum_of_div ( int n )
-{
-  tmp.append(n);
-  int sum = 0;
-  for ( int i = 1; i < n ; i ++)
-    if ( n % i == 0 )
-    {
-      sum = sum + i;
-      tmp.append(i);
-    }
-  return sum;    
-}
-// a comment to test git
-void setup ()
-{
-   size(576,442);
-   background(0,50,50);
-   int n = 10;
-
-   int cont = 0;
-   int number = 1;
-
-   while ( true )
-   {
-     if ( cont == n )
-       break;
-     tmp = new IntList();
-     int sumDiv = sum_of_div(number);
-     if ( number < sumDiv)
-     {
-       tmp.append(sumDiv);
-       abundants.add(tmp);
-       cont ++ ;
-     }
-     number ++ ;
-      
-   }
-   for ( int i = 0 ; i < cont ; i ++ )
-   {
-      println (i + " " + abundants.get(i) );
-   }
-   float scale = 3;
-   float x = 0;
-   for ( int xi = 0 ; xi < 6 ; xi ++ )
-   {
-     float radOfSum = abundants.get(xi).get(abundants.get(xi).size() - 1 )/2.0;
-     x += radOfSum  * scale;
-     float radOfNumber = abundants.get(xi).get(0)/2.0;
-     float y =  radOfNumber * scale;
-     fill(255,255,200);
-     noStroke();
-     ellipse(x,y, radOfNumber * 2 * scale ,radOfNumber * 2 * scale);
-     y += radOfNumber* scale;
-     
-     for ( int i = 1 ; i < abundants.get(xi).size(); i ++ )
-     {
-       int size = abundants.get(xi).size();
-       float diamOfActual =abundants.get(xi).get(i);
-       float diamOfFirst = abundants.get(xi).get(1);
-       float diamOfLast = abundants.get(xi).get(size - 2 ) * 1.1;
-       float a = map(diamOfActual,diamOfFirst 
-                 ,diamOfLast,0,255);
-       fill(255,255-a,255-a); 
-       noStroke();
-       y += diamOfActual/2.0 * scale;
-       //println(y);
-       ellipse(x, y , diamOfActual* scale,diamOfActual* scale);
-       y += diamOfActual/2.0 * scale;  
-     }
-     x += radOfSum * scale;
-   }
-}
--->
-```
-
-V:
-## Code JavaScript: 
-```java
-<!-- 
-var sketch = function ( p ) {
-
-    var n = 10; 
-    var abundants =  [];
-    var tmp = new Array();
-    function sum_of_div ( n )
-    {
-    tmp.push(n);
-    var sum = 0;
-    for ( var i = 1; i < n ; i ++)
-        if ( n % i == 0 )
-        {
-        sum = sum + i;
-        tmp.push(i);
-        }
-    return sum;    
-    }
-      p.setup =   function() {
-            
-            p.createCanvas(576, 438);
-            p.noLoop();       
-        }
-        
-        
-        
-        p.draw = function () {
-            p.background(0,50,50);
-        //   console.log("algo");
-            var cont = 0;
-            var number = 1;
-            //ellipse(30,30,30,30);
-            while ( true )
-            {
-                if ( cont == n )
-                    break;
-                tmp = new Array();
-                var sumDiv = sum_of_div(number);
-        //      console.log(sumDiv);
-                
-                if ( number < sumDiv)
-                {
-                    tmp.push(sumDiv);
-                    //console.log(tmp);
-                    abundants.push(tmp);
-                   // console.log(abundants);
-                    cont ++ ;
-                }
-                number ++ ;
-            
-            }
-
-            var scale = 3;
-            var x = 0;
-            for ( var xi = 0 ; xi < 6 ; xi ++ )
-            {
-                var radOfSum = abundants[xi][abundants[xi].length - 1]/2.0;
-                x += radOfSum * scale;
-                var radOfNumber = abundants[xi][0]/2.0;
-                var y =  radOfNumber * scale;
-                p.fill(255,255,200);
-                p.noStroke();
-                p.ellipse(x,y, radOfNumber * 2 *  scale ,radOfNumber * 2 *  scale);
-                y += radOfNumber* scale;
-                
-                for ( var i = 1 ; i < abundants[xi].length; i ++ )
-                {
-                    var length = abundants[xi].length;
-                    var diamOfActual = abundants[xi][i];
-                    var diamOfFirst = abundants[xi][1];
-                    var diamOfLast = abundants[xi][length-2]*1.1;
-                    var a = p.map(diamOfActual,diamOfFirst,diamOfLast,0,255);
-                    p.fill(255,255-a,255-a); 
-                    p.noStroke();
-                    y += diamOfActual/2.0 * scale;
-                    p.ellipse(x, y , diamOfActual* scale,diamOfActual* scale);
-                    y += diamOfActual/2.0 * scale;  
-                }
-                x += radOfSum * scale;
-            }
-            
-    }
-};
-var myp5 = new p5 (sketch, 'abundant_id');
--->
-```
-V:
-##The result 
+## Sticks 
+> This game was based on the Hanoi Towers. UN puzzle Towers of Hanoi is or mathematical game invented in 1883 by the French mathematician Edouard Lucas.
+###### For more information, on [Wikipedia]( https://es.wikipedia.org/wiki/Torres_de_Hanói)
 
 <div id='abundant_id'> </div>
 
