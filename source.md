@@ -30,8 +30,9 @@ H:
  1. Authors <!-- .element: class="fragment" data-fragment-index="1"-->
  1. Hypothesis <!-- .element: class="fragment" data-fragment-index="2"-->
  1. Contex <!-- .element: class="fragment" data-fragment-index="3"-->
-  1. Problem <!-- .element: class="fragment" data-fragment-index="4"-->
-   1. Finding <!-- .element: class="fragment" data-fragment-index="5"-->
+ 1. Problem <!-- .element: class="fragment" data-fragment-index="4"-->
+ 1. Finding <!-- .element: class="fragment" data-fragment-index="5"-->
+  1. Algorithms <!-- .element: class="fragment" data-fragment-index="5"-->
 H:
 
 # *The main idea*
@@ -55,14 +56,10 @@ H:
 V:
 ### Differences between Classical computers and quantum computers 
 
-  > <!-- .element: class="fragment" data-fragment-index="1"-->
-
-  
-More information on [Wikipedia](https://en.wikipedia.org/wiki/Space_Invaders) <!-- .element: class="fragment" data-fragment-index="1"-->
 
 V: 
 ### Classical Computers
-  >Classical computers and quantum computers are that classical theory of computation are based on binary units of information called bits that can either been ‘1’ or ‘0’ and ‘true’ or ‘false’. 
+  > The Classical theory of computation is based on binary units of information called bits that can either been ‘1’ or ‘0’ and ‘true’ or ‘false’. 
 
 V:
 ## quantum computers 
@@ -73,17 +70,25 @@ V:
 H:
 ## Problem 
 <!-- .slide: data-background="#7E2121"  -->
-> But while many groups have built small quantum computing devices in the past, most of these have only been hard-wired to solve a single problem, and any reprogramming requires **complex physics**.  
-H:
+>While many groups have built small quantum computing devices in the past,
+>most of these have only been hard-wired to solve a single problem, and any reprogramming requires **complex physics**.  
 
+H:
 ## Findings
- >This new device is different, because it's easily reprogrammable, and it's already been shown to solve three algorithms in a single step, something that would require several operations for a normal computer to calculate.
+This new device is different
+ >Because it's easily reprogrammable, and it's already been shown to solve three algorithms in a single step, something that would require several operations for a normal computer to calculate.
 
 V:
 ## Algortims
->The team reprogrammed the device to run three problems that quantum computers are known to be able to solve:
+>The team reprogrammed the device to run three problems that quantum computers are known to be able to solve.
+
+V:
 * Quantum Fourier Transform algorithm (70 percent).
+
+V:
 * the Bernstein-Vazirani algorithm (90 percent successful)
+
+V:
 *  the Deutsch-Jozsa algorithm (which it could complete with 95 percent success rate)
 
   
