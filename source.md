@@ -43,7 +43,7 @@ V:
   >A team from the University of Maryland.   
   <!--*Do you wanna play it?* <!-- .element: class="fragment" data-fragment-index="2"--> -->
 V:
-## Hypotesis?:
+## Hypothesis?:
 
 Researchers have built the first quantum computer that can not only be programmed, but, just like a regular computer, can actually be reprogrammed, too.
 <!-- .element: class="fragment" data-fragment-index="1"-->
