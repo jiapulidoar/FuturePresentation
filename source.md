@@ -76,7 +76,7 @@ This new device is different
  >Because it's easily reprogrammable, and it's already been shown to solve three algorithms in a single step, something that would require several operations for a normal computer to calculate.
 
 V:
-## Algortims
+## Algorithms
 <!-- .slide: data-background="#005050" -->
 >The team reprogrammed the device to run three problems that quantum computers are known to be able to solve.
 
