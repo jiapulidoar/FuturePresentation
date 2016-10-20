@@ -83,6 +83,8 @@ V:
 V:
 * Quantum Fourier Transform algorithm (70 percent).
 
+
+
 V:
 * the Bernstein-Vazirani algorithm (90 percent successful)
 
