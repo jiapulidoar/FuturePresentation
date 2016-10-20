@@ -50,7 +50,7 @@ Researchers have built the first quantum computer that can not only be programme
 
 
 H:
-# *Contex*
+# *Context*
 
 V:
 ### Differences between Classical computers and quantum computers 
