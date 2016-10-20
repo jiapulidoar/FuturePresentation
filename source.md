@@ -18,84 +18,74 @@
 
 H:
 
-# ** FUTURE GAMES ** 
+# **  First Reprogrammable quantum computer ** 
 
-by  [Sebastian Chaves](https://github.com/adamantwharf) - [Laura Santos](https://github.com/lsfinite) - [Jimmy Pulido](https://github.com/jiapulidoar)
+[Jimmy Pulido](https://github.com/jiapulidoar)
 I
 H:
 
 # Index
 
 <!-- .slide: data-background="#7E2121" --> 
- 1. The main idea  <!-- .element: class="fragment" data-fragment-index="1"-->
- 1. The Games <!-- .element: class="fragment" data-fragment-index="2"-->
- 1. The way we did it <!-- .element: class="fragment" data-fragment-index="3"-->
+ 1. Authors <!-- .element: class="fragment" data-fragment-index="1"-->
+ 1. Hypothesis <!-- .element: class="fragment" data-fragment-index="2"-->
+ 1. Contex <!-- .element: class="fragment" data-fragment-index="3"-->
+  1. Problem <!-- .element: class="fragment" data-fragment-index="4"-->
+   1. Finding <!-- .element: class="fragment" data-fragment-index="5"-->
 H:
 
 # *The main idea*
 <!-- .slide: data-background="#005050" -->
 V:
  
- ## What is it about?
+ ## Authors?
   
-  >The idea of the game was creat a serie of mini games. Easy to play, easy to lose.This will become attractive to the player, so she/he will play it again and again.  
-  *Do you wanna play it?* <!-- .element: class="fragment" data-fragment-index="2"-->
+  >A team from the University of Maryland.   
+  <!--*Do you wanna play it?* <!-- .element: class="fragment" data-fragment-index="2"--> -->
 V:
-## Mini Games?:
-Yeap, we have made five of them, so you can play the one you consider more interesting. 
+## Hypotesis?:
+
+Researchers have built the first quantum computer that can not only be programmed, but, just like a regular computer, can actually be reprogrammed, too.
 <!-- .element: class="fragment" data-fragment-index="1"-->
 
-Just see the squares...  <!-- .element: class="fragment" data-fragment-index="2"-->
-
-**And make your choice!!!** <!-- .element: class="fragment" data-fragment-index="3"-->
 
 H:
-# *The Games*
+# *Contex*
 
 V:
-### Galaga 
-  >A version of the clasic game. Is an arcade video game developed by Tomohiro Nishikado and released in 1978 <!-- .element: class="fragment" data-fragment-index="1"-->
+### Differences between Classical computers and quantum computers 
+
+  > <!-- .element: class="fragment" data-fragment-index="1"-->
 
   
 More information on [Wikipedia](https://en.wikipedia.org/wiki/Space_Invaders) <!-- .element: class="fragment" data-fragment-index="1"-->
 
 V: 
-### Clouds
-  > How far can you go?? The sky is the limit. With this game you will jump the higher you can. Just move te bus with the mouse to go up.
-
-
-The inspiration for this game was the experience as a gamer. <!-- .element: class="fragment" data-fragment-index="1"-->
-V:
-## Sticks 
-> This game was based on the Towers of Hanoi. This Puzzle is a mathematical game invented in 1883 by the French mathematician Edouard Lucas.
-
-
-The more you play, the more difficult it will become. 
-
-For more information, on [Wikipedia]( https://es.wikipedia.org/wiki/Torres_de_Hanói)
+### Classical Computers
+  >Classical computers and quantum computers are that classical theory of computation are based on binary units of information called bits that can either been ‘1’ or ‘0’ and ‘true’ or ‘false’. 
 
 V:
-## Colors
+## quantum computers 
+> Quantum processors, on the other hand, are made of qubits, which can be ‘1’, ‘0’ or both at the same time. 
+
+
+
+H:
+## Problem 
 <!-- .slide: data-background="#7E2121"  -->
-> This game consist of let the drop fall in the correct color cube. The drop will follow the mouse position.If you lose, just ckick any part of the canvas, a the game will start again.  
-V:
+> But while many groups have built small quantum computing devices in the past, most of these have only been hard-wired to solve a single problem, and any reprogramming requires **complex physics**.  
+H:
 
-## Bounce
- >Version of the classic game of the red ball that have to pass thought different mazes to achive their goal. The ball obeys the up/down, right/left arrows of the keyboard. 
-
-V:
-## Resume 
-| The games   | How to play them                 |
-| ------------|:--------------------------------:|
-| Galaga      | Up/down arrows and mouse press   |
-| Clouds      | With the position of the mouse   |  
-| Sticks      | Ckick the towers with the mouse  | 
-| Colors      | Follow the mouse position        |
-|Bounce       | Use your keyboard arrows to play |
+## Findings
+ >This new device is different, because it's easily reprogrammable, and it's already been shown to solve three algorithms in a single step, something that would require several operations for a normal computer to calculate.
 
 V:
+## Algortims
+>The team reprogrammed the device to run three problems that quantum computers are known to be able to solve:
+* Quantum Fourier Transform algorithm (70 percent).
+* the Bernstein-Vazirani algorithm (90 percent successful)
+*  the Deutsch-Jozsa algorithm (which it could complete with 95 percent success rate)
 
-# *The way we did it *:
-Each one of the games is a class, and Games, is the super class.  
+  
 
 
