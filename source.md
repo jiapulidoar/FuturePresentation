@@ -33,18 +33,15 @@ H:
  1. Problem <!-- .element: class="fragment" data-fragment-index="4"-->
  1. Finding <!-- .element: class="fragment" data-fragment-index="5"-->
   1. Algorithms <!-- .element: class="fragment" data-fragment-index="5"-->
+  
 H:
-
-# *The main idea*
-<!-- .slide: data-background="#005050" -->
-V:
  
- ## Authors?
+ ## Authors
   
   >A team from the University of Maryland.   
   <!--*Do you wanna play it?* <!-- .element: class="fragment" data-fragment-index="2"--> -->
 V:
-## Hypothesis?:
+## Hypothesis
 
 Researchers have built the first quantum computer that can not only be programmed, but, just like a regular computer, can actually be reprogrammed, too.
 <!-- .element: class="fragment" data-fragment-index="1"-->
@@ -80,6 +77,7 @@ This new device is different
 
 V:
 ## Algortims
+<!-- .slide: data-background="#005050" -->
 >The team reprogrammed the device to run three problems that quantum computers are known to be able to solve.
 
 V:
